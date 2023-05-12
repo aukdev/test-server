@@ -7,6 +7,7 @@ const stripe = require("stripe")(
 const app = express();
 app.use(cors());
 app.use(express.json());
+const PORT = process.env.PORT || 3001;
 
 app.post("/test", (req, res) => res.status(200).json({ msg: "hi" }));
 
@@ -24,4 +25,4 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(PORT, () => console.log("Server running on port 5000"));
