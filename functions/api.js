@@ -3,6 +3,7 @@ const cors = require("cors");
 const stripe = require("stripe")(
   "sk_test_51N6SokEyrZyjTHe0p6XLtVz9PsbTuhtvaxAf4TNaUGdOUS69nxVgjuwvRljbzzJVBnxGPZgiZ7OronMgVBiTvfcf00Ag1ytyht"
 );
+const serverless = require("serverless-http");
 
 const app = express();
 app.use(cors());
@@ -27,4 +28,5 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log("Server running on port 5000"));
+// app.listen(PORT, () => console.log("Server running on port 5000"));
+module.exports.handler = serverless(app);
