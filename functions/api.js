@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
-  "sk_test_51Mu6dqSDBZxcxSvs7mKF7qw2nFgrkOQiopOCjt2jLXOQUp7PrP0iVohJt70yKcKjUKovJ2b2ka94P0mx9hrSn2SA00CXoktejL"
+  "sk_test_51N6SokEyrZyjTHe0p6XLtVz9PsbTuhtvaxAf4TNaUGdOUS69nxVgjuwvRljbzzJVBnxGPZgiZ7OronMgVBiTvfcf00Ag1ytyht"
 );
 const serverless = require("serverless-http");
 
